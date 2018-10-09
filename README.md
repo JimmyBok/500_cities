@@ -68,6 +68,11 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
                for i in range(vif_df.shape[1])], 
               index=vif_df.columns)
 ```
+|   count |   mean |    std |   min |   25% |   50% |   75% |     max |
+|--------:|-------:|-------:|------:|------:|------:|------:|--------:|
+|      58 |  9.852 | 61.175 | 1.018 | 1.194 | 1.476 | 1.868 | 467.641 |
+
+    * Note: Constant has VIF of 467.641, next highest value is CA at 7.16
 
 ## MVP+, MVP++, MVP+++
     1. Expand analyses to include other bad behaviors (i.e., smoking and sleeping < 7 hrs a night).
