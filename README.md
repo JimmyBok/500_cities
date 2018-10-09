@@ -42,7 +42,7 @@ October, 2018
 
 |   Initial |   Final |   Dropped |   Dropped % |
 |----------:|--------:|----------:|------------:|
-|     28004 |   27141 |       863 |       0.031 |
+|     28004 |   27141 |       863 |       3.082 |
 
 
 #### Median Age
@@ -60,6 +60,14 @@ October, 2018
 ### Binge Drinking
 
 ![Binge Drinking Boxplot](images/Binge_drinking.png "Binge Drinking Boxplot")
+
+#### Variance Inflation Factors
+```python
+vif_df = add_constant(df.drop(['Data_Value'], axis=1))
+vifs = pd.Series([variance_inflation_factor(vif_df.values, i) 
+               for i in range(vif_df.shape[1])], 
+              index=vif_df.columns)
+```
 
 ## MVP+, MVP++, MVP+++
     1. Expand analyses to include other bad behaviors (i.e., smoking and sleeping < 7 hrs a night).

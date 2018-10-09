@@ -58,7 +58,7 @@ class Results():
         temp['Initial'] = len(self.orig)
         temp['Final'] = len(self.data)
         temp['Dropped'] = temp['Initial'] - temp['Final']
-        temp['Dropped %'] = temp['Dropped'] / temp['Initial']
+        temp['Dropped %'] = (temp['Dropped'] / temp['Initial'])*100
         self.total_dropped = temp.to_frame().transpose()
         self.to_markdown(self.total_dropped, round_places=3)
 
