@@ -75,6 +75,18 @@ class Results():
         plt.savefig('./images/'+name+'.png')
         plt.close()
 
+    def state_data(self):
+        state_vars = [ x for x in self.data.columns if x.startswith('State')]
+        self.states = self.data[state_vars]
+        self.states['State_Abbr_CO']=self.states[state_vars].apply(lambda row: 1 if row.sum()==0 else 0, axis=1)
+        self.states_sum = self.states.sum()
+        ax = self.states_sum.plot.box()
+        ax.set_xticklabels(['Count'])
+        plt.tight_layout()
+        # plt.show()
+        plt.savefig('./images/State_count.png')
+        plt.close()
+
 if __name__ == '__main__':
     results = Results(initial_data)
     results.load_data()
@@ -86,3 +98,4 @@ if __name__ == '__main__':
     rotations = [0, 0, 15]
     for variables, names, rot in zip(var_list, img_names, rotations):
         results.box_plot_vars(results.data, variables, name=names, xrot=rot)
+    results.state_data()

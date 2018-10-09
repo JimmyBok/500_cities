@@ -44,10 +44,18 @@ October, 2018
 |----------:|--------:|----------:|------------:|
 |     28004 |   27141 |       863 |       0.031 |
 
+
+#### Median Age
+
 ![Age Boxplot](images/Median_Age.png "Age Boxplot")
 
+#### Demographic Variables
 
 ![Percentages Boxplot](images/Demographic_percentages.png "Percentages Boxplot")
+
+#### State Variables (Categorical)
+
+![States Boxplot](images/State_count.png "States Boxplot")
 
 ### Binge Drinking
 
