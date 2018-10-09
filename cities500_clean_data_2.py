@@ -19,6 +19,8 @@ initial_data = {
 initial_data['data_dir'] = initial_data['home'] + 'data/' # Where output will be stored
 initial_data['merged_csv'] = initial_data['data_dir'] + 'Merged_data_2018_10_06.csv' # name of merged dataframe
 initial_data['clean_csv'] = initial_data['data_dir'] + 'Clean_data.csv' # name of merged dataframe
+initial_data['clean_csv2'] = initial_data['data_dir'] + 'Clean_data_w_state.csv' # name of merged dataframe
+
 # Define class methods and attributes
 class Cities500(object):
     ''' 
@@ -67,7 +69,8 @@ class Cities500(object):
         All predictors from acs5 2015 
         '''
         vois = ['Data_Value',
-                'Med_age']
+                'Med_age',
+                'StateAbbr']
         self.df = self.clean[vois]
 
     def calc_vars_of_interest(self):        
@@ -102,7 +105,12 @@ class Cities500(object):
         cut_1 = len(self.df)
         self.data = self.df.dropna()
         print(f'Dropped {cut_1-len(self.data)} for missing data')
-        self.data.to_csv(self.clean_csv, index=False)
+        self.data.drop(columns='StateAbbr').to_csv(self.clean_csv, index=False)
+
+    def dummy_code_state(self):
+        self.data2 = pd.get_dummies(self.data)
+        self.data2.drop(columns = 'StateAbbr_CO', inplace=True) # CO is reference state
+        self.data2.to_csv(self.clean_csv2, index=False)
 
 if __name__ == '__main__':
     cities = Cities500(initial_data)
@@ -117,4 +125,4 @@ if __name__ == '__main__':
     cities.calc_work_depart()
     cities.calc_insurance()
     cities.drop_missing()
-    
+    cities.dummy_code_state()
