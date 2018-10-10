@@ -13,6 +13,8 @@ October, 2018
     Therefore it is important to understand factors that contribute to bad habits 
     or, conversely, what predicts healthy living. 
 
+     The National Institute on Alcohol Abuse and Alcoholism defines binge drinking as a pattern of drinking that brings a person’s blood alcohol concentration (BAC) to 0.08 grams percent or above. This typically happens when men consume 5 or more drinks or women consume 4 or more drinks in about 2 hours.4 Most people who binge drink are not alcohol dependent. (From https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm)
+
     Can I predict these bad habits by demographic variables such as age, gender and education?
 
 ## The Data
@@ -88,9 +90,39 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
 
     * Note: Constant has VIF of 467.641, next highest value is CA at 7.16
 
+### Comparing Models
+
+| Model            |       alpha |   test_mean_rmse |   test_r2 |   train_mean_rmse |
+|:-----------------|------------:|-----------------:|----------:|------------------:|
+| LinearRegression |             |            2.189 |     0.68  |             2.159 |
+| Lasso            | 0.00431261  |            2.222 |     0.666 |             2.198 |
+| Ridge            | 0.120338    |            2.189 |     0.68  |             2.159 |
+| ElasticNet       | 0.00862522  |            2.374 |     0.62  |             2.348 |
+| LassoLars        | 3.04196e-06 |            2.189 |     0.68  |             2.159 |
+    
+    * Note: Ridge performed best (marginally better than Linear and LassoLars)
+    * For simplicties sake and since performance was comparable, interpreting linear regression
+
+#### Linear Regression Analysis
+
+    57 Predictors + an intercept in model
+    50 Categorical state predictors
+        CO was baseline
+        DC was included
+    7 Demographic variables shown above
+
+
+|   Intercept |   Percent_female |   Income_to_pov_rat_lt_1_5 |   Edu_less_than_hs_or_GED |   Percent_insured |   Work_depart_before_8am |   Med_age |   Commute_time_lt_30 |
+|------------:|-----------------:|---------------------------:|--------------------------:|------------------:|-------------------------:|----------:|---------------------:|
+|     42.9877 |         -16.9848 |                   -10.0258 |                  -6.59758 |          -4.20619 |                -0.767881 |  -0.24437 |             0.981684 |
+
+### Choromap
+
+![Impact of State on Binge-Drinking](images/choromap.png "Binge Drinking By State")
+
+
 ## MVP+, MVP++, MVP+++
     1. Expand analyses to include other bad behaviors (i.e., smoking and sleeping < 7 hrs a night).
-    2. Include other predictors of interest from the ACS5. Candidates include commute time and work start time.
-    3. Include data from additional sources to explore non-demographic contributors to bad habits. 
+    2. Include data from additional sources to explore non-demographic contributors to bad habits. 
         Data can be organized by geolocation (longitude, latitude) so data from non-Census sources could be included. 
         Candidates include weather and social  media use (e.g., Twitter posts). 
