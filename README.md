@@ -61,6 +61,20 @@ October, 2018
 
 ![Binge Drinking Boxplot](images/Binge_drinking.png "Binge Drinking Boxplot")
 
+#### Goldfeldquandt Test
+```python
+all_cols = list(df.columns)
+all_cols.remove('Data_Value')
+all_columns = "+".join(all_cols)
+my_formula = "y~" + all_columns
+results1 = smf.ols(my_formula, data=df).fit()
+print(results1.summary2())
+
+f_stat, p_val, inc_dec = het_goldfeldquandt(results1.resid, results1.model.exog)
+print(f'For model 1 het goldfeldquandt test, the f stat is {f_stat} and the p value is {p_val}')
+```
+For model 1 het goldfeldquandt test, the f stat is 0.855 and the p value is 0.999
+
 #### Variance Inflation Factors
 ```python
 vif_df = add_constant(df.drop(['Data_Value'], axis=1))
