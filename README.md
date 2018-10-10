@@ -13,7 +13,10 @@ October, 2018
     Therefore it is important to understand factors that contribute to bad habits 
     or, conversely, what predicts healthy living. 
 
-     The National Institute on Alcohol Abuse and Alcoholism defines binge drinking as a pattern of drinking that brings a person’s blood alcohol concentration (BAC) to 0.08 grams percent or above. This typically happens when men consume 5 or more drinks or women consume 4 or more drinks in about 2 hours.4 Most people who binge drink are not alcohol dependent. (From https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm)
+     The National Institute on Alcohol Abuse and Alcoholism defines binge drinking as a pattern of drinking that 
+     brings a person’s blood alcohol concentration (BAC) to 0.08 grams percent or above. This typically happens when 
+     men consume 5 or more drinks or women consume 4 or more drinks in about 2 hours.4 Most people who binge drink 
+     are not alcohol dependent. (From https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm)
 
     Can I predict these bad habits by demographic variables such as age, gender and education?
 
