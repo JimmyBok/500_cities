@@ -155,7 +155,7 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
 2. As the % of the population that is female <b>increases</b>, 
     the % of the population that binge drinks will <b>decrease</b>.
     -Coef was -16.9848
-<strike>3. As the % of the population with less than a high school education <b>increases</b>,
+3. <strike>As the % of the population with less than a high school education <b>increases</b>,
     the % of the population that binge drinks will <b>increase</b>.</strike>
     -Coef was -6.59758
 4. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
