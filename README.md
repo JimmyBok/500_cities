@@ -148,24 +148,32 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
 ## Hypotheses Results
 
 0. The base rate of binge drinking will be above 0 (intercept>0).
+
     -Intercept was ~43%
 1. As the median age <b>increases</b>,
     the % of the population that binge drinks will <b>decrease</b>.
+
     -Coef was -0.24437
 2. As the % of the population that is female <b>increases</b>, 
     the % of the population that binge drinks will <b>decrease</b>.
+
     -Coef was -16.9848
 3. <strike>As the % of the population with less than a high school education <b>increases</b>,
     the % of the population that binge drinks will <b>increase</b>.</strike>
+
     -Coef was -6.59758
 4. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
     the % of the population that binge drinks will <b>decrease</b>.
+
 5. As the % of the population with a commute less than 30 minutes <b>increases</b>,
     the % of the population that binge drinks will <b>increase</b>.  
+
 6. As the % of the population that departs for work before 8am <b>increases</b>,
     the % of the population that binge drinks will <b>decrease</b>.
+
 7. As the % of the population with insurance <b>increases</b>,
     the % of the population that binge drinks will <b>decrease</b>.
+
 8. State will be associated with binge drinking,
     no directional hypotheses.   
 
