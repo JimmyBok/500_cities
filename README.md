@@ -169,21 +169,16 @@ In general the hypotheses were not supported because bad habits were differentia
 The only factor consistently negatively correlated with bad habits as a whole was median age.
 
 Binge drinking was positively associated with % having a commute < 30 minutes.
-
 Binge drinking was negatively associated with age, % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured. 
 
 Smoking was postiively associated with % education < HS, % IPR <1.5, % having a commute < 30 minutes, % departing for work before 8 am, and % insured.
-
 Smoking was negatively assocaited with age and % female.
 
 Sleeping < 7 hrs a night was postiively associated with % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured.
-
 Sleeping < 7 hrs a night was negatively assocaited with age and having a commute < 30 minutes.
 
 Of note, education, IPR, insurance and depart time all showed a similar pattern of results. 
-
 That is, they negatively predicted binge drinking and positively predicted smoking and sleeping <7 hrs a night.
-
 These factors may all reflect socio-economic status which may be a more general predictor of bad habits. 
 
 
