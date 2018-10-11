@@ -140,33 +140,18 @@ Seven demographic variables.
 ![Impact of State on smoking](images_sleep/choromap.png "Sleep By State")
 
 
+## Hypotheses Revisited
 
-## Hypotheses 
+In general the hypotheses were not supported because bad habits were differentially predicted by these factors.
+For example, income-to-poverty ratio negatively predicted binge drinking but positively predicted both smoking and sleeping < 7hrs a night. Whereas % female negatively predicted drinking and smoking while positively correlating with sleeping less than 7 hours a night. 
+   
 
-1. The base rate of bad habits will be above 0 (intercept>0).
-1. As the median age <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.
-1. As the % of the population that is female <b>increases</b>, 
-    the % of the population engaging in bad habits will <b>decrease</b>.
-1. As the % of the population with less than a high school education <b>increases</b>,
-    the % of the population engaging in bad habits will <b>increase</b>. 
-1. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.
-1. As the % of the population with a commute less than 30 minutes <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.  
-1. As the % of the population that departs for work before 8am <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.
-1. As the % of the population with insurance <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.
-1. State will be associated with bad habits,
-    no directional hypotheses.   
-
-    
 ## MVP+, MVP++, MVP+++
 1. Include data from additional sources to explore non-demographic contributors to bad habits. 
     Data can be organized by geolocation (longitude, latitude) so data from non-Census sources could be included. 
     Candidates include weather and social  media use (e.g., Twitter posts). 
-
+1. Use geographical and demographic data to target intevention regions and groups. 
+    For example substance abuse appears more common among males, while not sleeping appears more prevalent among females.  
 
 <!---
                         STATS MODEL RESULTS FOR BINGE DRINKING
