@@ -16,6 +16,12 @@ class CleanData(Cities500):
         super(CleanData,self).__init__(*args, **kwargs)
         self.clean_csv = self.data_dir + 'Clean_data.csv' # name of merged dataframe
         self.clean_csv_w_states = self.data_dir + 'Clean_data_w_state.csv' # name of merged dataframe
+        self.tract_subset = {
+            'GeographicLevel' :'Census Tract', #select only tract level data
+            'MeasureId' : 'CSMOKING', #select only binge drinking data
+            'DataValueTypeID' : 'CrdPrv' #select only age-adjusted values
+            }
+
 
     def clean_data(self):
         self.load_data()

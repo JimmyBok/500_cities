@@ -62,7 +62,7 @@ class Results():
         img_names =['Binge_drinking', 'Median_Age', 'Demographic_percentages']
         rotations = [0, 0, 15]
         for variables, names, rot in zip(var_list, img_names, rotations):
-            self.box_plot_vars(results.data, variables, name=names, xrot=rot)
+            self.box_plot_vars(self.data, variables, name=names, xrot=rot)
         self.state_data()
         self.run_vif()
         self.run_smf_ols_model()

@@ -79,7 +79,7 @@ class LinearData(SkLearnResults):
                 ]
         self.to_markdown(self.demo_df[vois])
         
-    def plot_state_coeffs(self):
+    def plot_state_coeffs(self, title='Impact of State on Binge Drinking'):
         self.state_df['State'] = self.state_df['name'].apply(lambda x: x[-2:])
         self.state_df['Coef_str'] = self.state_df['coef'].apply(lambda x: '{:,.2%}'.format(x))
         # type defined is choropleth to 
@@ -94,13 +94,13 @@ class LinearData(SkLearnResults):
                     # text can be given anything you like 
                     text = self.state_df['Coef_str'].values, 
                     z = self.state_df.coef.values, 
-                    colorbar = {'title': 'Impact of State on Binge Drinking'}) 
+                    colorbar = {'title': title}) 
         layout = dict(geo ={'scope': 'usa'})           
         # passing data dictionary as a list  
         choromap = go.Figure(data = [data], layout = layout) 
         # plotting graph 
         offline.iplot(choromap, image='png')
-        plotly.io.write_image(choromap, '../images/choromap.png') 
+        plotly.io.write_image(choromap, self.img_dir + 'choromap.png') 
 
         
 if __name__ == '__main__':
