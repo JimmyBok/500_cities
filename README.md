@@ -57,12 +57,12 @@ commute time, work departure time and insurance coverage as predictors of bad ha
 
 #### Total Sample Size
 
-|   Binge Drinking |   Smoking |   Sleep < 7hrs |
-|-----------------:|----------:|---------------:|
-|        28004     |   28004   |      28004     |
-|        27141     |   27080   |      27137     |
-|          863     |     924   |        867     |
-|            3.082 |       3.3 |          3.096 |
+|         |   Binge Drinking |   Smoking |   Sleep < 7hrs |
+|:--------|-----------------:|----------:|---------------:|
+| Initial |        28004     |   28004   |      28004     |
+| Final   |        27141     |   27080   |      27137     |
+| Dropped |          863     |     924   |        867     |
+| Drop %  |            3.082 |       3.3 |          3.096 |
 
 #### Median Age
 

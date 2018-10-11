@@ -115,7 +115,7 @@ df['Dropped'] = df.Initial-df.Final
 df['Drop %'] = df.Dropped/df.Initial*100
 df = df.T 
 df.columns = ['Binge Drinking', 'Smoking', 'Sleep < 7hrs']
-to_markdown(df)
+to_markdown_with_index(df)
 
 
 data = {'Binge Drinking': [43.0240, -0.2442, -17.0208, -6.5088, -10.0818, 0.9218, -0.8901, -4.1470],
