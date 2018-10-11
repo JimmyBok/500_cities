@@ -41,17 +41,17 @@ The disease risk factors, or bad habits, as defined by the CDC
 
 
 ### American Community Survey-5 year estimates(ACS5): 
-    The US Census Bureau collected 5 year estimates on demographic variables 
-    (https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2015/5-year.html) 
-    accessible by census tract ID (for joining with 500 Cities data). 
-    This dataset includes 1000s of variables (see: https://api.census.gov/data/2015/acs5/variables.html). 
-    From these I started by pulling variables on age, gender, income, education,
-    commute time, work departure time and insurance coverage as predictors of bad habits. 
+The US Census Bureau collected 5 year estimates on demographic variables 
+(https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2015/5-year.html) 
+accessible by census tract ID (for joining with 500 Cities data). 
+This dataset includes 1000s of variables (see: https://api.census.gov/data/2015/acs5/variables.html). 
+From these I started by pulling variables on age, gender, income, education,
+commute time, work departure time and insurance coverage as predictors of bad habits. 
 
 ## MVP
-    1. Combine data from 500 Cities and the ACS5 by census tract to yield data on 25,000+ geographic regions.
-    2. Explore demographic and regional (i.e. state) predictors of bad habits. 
-    3. Conduct regression analyses to quantify the relative contributions of these factors.
+1. Combine data from 500 Cities and the ACS5 by census tract to yield data on 25,000+ geographic regions.
+2. Explore demographic and regional (i.e. state) predictors of bad habits. 
+3. Conduct regression analyses to quantify the relative contributions of these factors to bad habits.
 
 ### ACS5 Demographic Variables
 
@@ -82,10 +82,10 @@ The disease risk factors, or bad habits, as defined by the CDC
 
 ## Hypotheses 
 
-0. The base rate of binge drinking will be above 0 (intercept>0).
+1. The base rate of bad habits will be above 0 (intercept>0).
 1. As the median age <b>increases</b>,
     the % of the population that binge drinks will <b>decrease</b>.
-2. As the % of the population that is female <b>increases</b>, 
+1. As the % of the population that is female <b>increases</b>, 
     the % of the population that binge drinks will <b>decrease</b>.
 3. As the % of the population with less than a high school education <b>increases</b>,
     the % of the population that binge drinks will <b>increase</b>. 
