@@ -1,5 +1,5 @@
 # Predicting Bad Habits: US Census Bureau
-Capstone 1 for Galvanize Data Immersive
+Capstone 1 for Galvanize Data Science Immersive
 
 By Danny Lumian, PhD
 
@@ -143,7 +143,8 @@ Seven demographic variables.
 ## Hypotheses Revisited
 
 In general the hypotheses were not supported because bad habits were differentially predicted by these factors.
-For example, income-to-poverty ratio negatively predicted binge drinking but positively predicted both smoking and sleeping < 7hrs a night. Whereas % female negatively predicted drinking and smoking while positively correlating with sleeping less than 7 hours a night. 
+For example, income-to-poverty ratio negatively predicted binge drinking but positively predicted both smoking and sleeping < 7hrs a night. 
+Whereas % female negatively predicted drinking and smoking while positively correlating with sleeping less than 7 hours a night. 
    
 
 ## MVP+, MVP++, MVP+++
