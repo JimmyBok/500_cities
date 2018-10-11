@@ -10,8 +10,8 @@ if __name__ =='__main__':
     data_cleaner.run_download()
     data_cleaner.clean_data()
     # Calculating residuals can take 30+ minutes
-    # results = Results(initial_data)
-    # results.run_analyze()
+    results = Results(initial_data)
+    results.run_analyze()
     sklresults = SkLearnResults(init_data)
     sklresults.run_sk_analysis()
     lrd = LinearData(init_data)

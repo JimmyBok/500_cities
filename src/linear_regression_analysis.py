@@ -20,8 +20,6 @@ from plotly.offline import download_plotlyjs, init_notebook_mode, iplot, plot
   
 # To establish connection 
 offline.init_notebook_mode(connected=True) 
-  
-
 
 class LinearData(SkLearnResults):
     ''' 

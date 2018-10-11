@@ -75,8 +75,8 @@ if __name__ =='__main__':
                             }
 
 
-    # results = Results(initial_data)
-    # results.run_analyze()
+    results = Results(initial_data)
+    results.run_analyze()
     sklresults = SkLearnResults(initial_data)
     sklresults.run_sk_analysis()
     lrd = LinearData(initial_data)

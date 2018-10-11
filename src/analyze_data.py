@@ -132,9 +132,9 @@ class Results():
 
     def run_smf_ols_model(self):
         self.smf_ols_model()
-        self.smf_ols_qq_plots()
-        self.smf_residual_scatter()
-        self.smf_het_goldfeldquandt()
+        # self.smf_ols_qq_plots()
+        # self.smf_residual_scatter()
+        # self.smf_het_goldfeldquandt()
 
     def smf_ols_model(self):
         all_cols = list(self.data.columns)
