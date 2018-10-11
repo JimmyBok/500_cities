@@ -80,6 +80,19 @@ commute time, work departure time and insurance coverage as predictors of bad ha
 
 ![Bad Habits Violin](fancy_images/Outcome_Violin.png "Bad Habits Violin")
 
+<!---
+
+|                          |   Med_age |   Percent_female |   Edu_less_than_hs_or_GED |   Income_to_pov_rat_lt_1_5 |   Commute_time_lt_30 |   Work_depart_before_8am |   Percent_insured |
+|:-------------------------|----------:|-----------------:|--------------------------:|---------------------------:|---------------------:|-------------------------:|------------------:|
+| Med_age                  |     1     |            0.089 |                    -0.31  |                     -0.497 |               -0.039 |                    0.047 |             0.353 |
+| Percent_female           |     0.089 |            1     |                    -0.006 |                      0.021 |               -0.071 |                   -0.027 |             0.137 |
+| Edu_less_than_hs_or_GED  |    -0.31  |           -0.006 |                     1     |                      0.719 |               -0.159 |                    0.248 |            -0.662 |
+| Income_to_pov_rat_lt_1_5 |    -0.497 |            0.021 |                     0.719 |                      1     |                0.032 |                   -0.104 |            -0.579 |
+| Commute_time_lt_30       |    -0.039 |           -0.071 |                    -0.159 |                      0.032 |                1     |                   -0.022 |             0.04  |
+| Work_depart_before_8am   |     0.047 |           -0.027 |                     0.248 |                     -0.104 |               -0.022 |                    1     |            -0.127 |
+| Percent_insured          |     0.353 |            0.137 |                    -0.662 |                     -0.579 |                0.04  |                   -0.127 |             1     |
+--->
+
 ## Hypotheses 
 
 1. The base rate of bad habits will be above 0 (intercept>0).
@@ -109,7 +122,7 @@ Fifty-seven predictors (plus intecept).
 
 Seven demographic variables.
 
-50 state variables (included DC, CO as baseline) 
+50 state variables (included DC, CO as baseline). 
 
 ### Demographic Results
 
@@ -123,7 +136,7 @@ Seven demographic variables.
 | % Commute < 30    |            0.922 |     0.335 |         -7.264 |
 | % Depart before 8 |           -0.89  |     3.853 |          2.228 |
 | % Insured         |           -4.147 |     6.236 |          3.034 |
-
+Note: All associated *p* values <.01
 
 ### Geographic Results
 
@@ -139,13 +152,32 @@ Seven demographic variables.
 
 ![Impact of State on smoking](images_sleep/choromap.png "Sleep By State")
 
+### Model Metrics
+
+|            |   Binge Drinking |   Smoking |   Sleep < 7hrs |
+|:-----------|-----------------:|----------:|---------------:|
+| Adj R^2    |            0.68  |     0.825 |          0.769 |
+| Train RMSE |            2.159 |     2.662 |          3.056 |
+| Test RMSE  |            2.189 |     2.742 |          3.078 |
 
 ## Hypotheses Revisited
 
 In general the hypotheses were not supported because bad habits were differentially predicted by these factors.
-For example, income-to-poverty ratio negatively predicted binge drinking but positively predicted both smoking and sleeping < 7hrs a night. 
-Whereas % female negatively predicted drinking and smoking while positively correlating with sleeping less than 7 hours a night. 
-   
+The only factor consistently negatively correlated with bad habits as a whole was median age.
+
+Binge drinking was positively associated with % having a commute < 30 minutes.
+Binge drinking was negatively associated with age, % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured. 
+
+Smoking was postiively associated with % education < HS, % IPR <1.5, % having a commute < 30 minutes, % departing for work before 8 am, and % insured.
+Smoking was negatively assocaited with age and % female.
+
+Sleeping < 7 hrs a night was postiively associated with % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured.
+Sleeping < 7 hrs a night was negatively assocaited with age and having a commute < 30 minutes.
+
+Of note, education, IPR, insurance and depart time all showed a similar pattern of results. 
+That is, they negatively predicted binge drinking and positively predicted smoking and sleeping <7 hrs a night.
+These factors may all reflect socio-economic status which may be a more general predictor of bad habits. 
+
 
 ## MVP+, MVP++, MVP+++
 1. Include data from additional sources to explore non-demographic contributors to bad habits. 

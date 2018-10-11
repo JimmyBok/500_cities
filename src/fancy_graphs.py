@@ -136,3 +136,32 @@ df.index = labels
 # df.columns = ['Binge Drinking', 'Smoking', 'Sleep < 7hrs']
 print('\n')
 to_markdown_with_index(df)
+
+
+
+
+vois = ['Med_age', 'Percent_female', 'Edu_less_than_hs_or_GED',
+       'Income_to_pov_rat_lt_1_5', 'Commute_time_lt_30',
+       'Work_depart_before_8am', 'Percent_insured']
+
+corr = df2[vois].corr() 
+to_markdown_with_index(corr)
+
+# ax = sns.pairplot(data=df2[vois])
+# plt.title('Demographic Pairplot')
+# ax.set(ylabel='%')
+# # xticks=['Female', 'Edu < HS','IPR < 1.5','Commute < 30', 'Work before 8', 'Insured']
+# # ax.set_xticklabels(xticks, rotation=30)
+# # ax.set_xticklabels(ax.get_xticklabels(),rotation=30)
+# plt.tight_layout()
+# # plt.show()
+# plt.savefig(img_dir+'Demographics_Pairplot.png')
+# plt.close()
+
+
+data = {'Binge Drinking': [0.680, 2.159, 2.189],
+                'Smoking' : [0.825,  2.662, 2.742],
+                'Sleep < 7hrs': [ 0.769,  3.056, 3.078]}
+df = pd.DataFrame.from_dict(data)
+df.index = ['Adj R^2', 'Train RMSE', 'Test RMSE']
+to_markdown_with_index(df)
