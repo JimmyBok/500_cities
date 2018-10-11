@@ -24,17 +24,20 @@ Can demographic variables, such as gender, age and geographical location, predic
     The disease risk factors, or bad habits, as defined by the CDC 
     (https://www.cdc.gov/500cities/definitions/unhealthy-behaviors.htm) are:
 
-        __Binge drinking__:
+        <b>Binge drinking</b>:
 
-            Adults aged ≥18 years who report having five or more drinks (men) or four or more drinks (women) on an occasion in the past 30 days.
+            Adults aged ≥18 years who report having five or more drinks (men) or 
+            four or more drinks (women) on an occasion in the past 30 days.
 
-        __Current smoking__:
+        **Current smoking**:
 
-            Respondents aged ≥18 years who report having smoked ≥100 cigarettes in their lifetime and currently smoke every day or some days.
+            Respondents aged ≥18 years who report having smoked ≥100 cigarettes
+             in their lifetime and currently smoke every day or some days.
 
         __Sleep < 7 hrs a night__:
 
-            Respondents aged ≥18 years who report usually getting insufficient sleep (<7 hours for those aged ≥18 years, on average, during a 24-hour period).
+            Respondents aged ≥18 years who report usually getting insufficient 
+            sleep (<7 hours for those aged ≥18 years, on average, during a 24-hour period).
 
 
 ### American Community Survey-5 year estimates(ACS5): 
