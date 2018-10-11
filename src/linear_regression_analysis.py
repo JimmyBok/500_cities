@@ -57,11 +57,11 @@ class LinearData(SkLearnResults):
         self.test_r2 = metrics.r2_score(self.y_test, self.test_pred_y)
 
     def create_df_w_name_coef(self):
-        feature_dict = {'name' : lrd.feature_names,
-                        'coef' : lrd.model.coef_
+        feature_dict = {'name' : self.feature_names,
+                        'coef' : self.model.coef_
                         }
         self.coeff_df = pd.DataFrame.from_dict(feature_dict)
-        ser = pd.Series({'name':'Intercept', 'coef': lrd.model.intercept_})
+        ser = pd.Series({'name':'Intercept', 'coef': self.model.intercept_})
         self.coeff_df = self.coeff_df.append(ser, ignore_index=True)
         ser = pd.Series({'name':'StateAbbr_CO', 'coef': 0})
         self.coeff_df = self.coeff_df.append(ser, ignore_index=True)

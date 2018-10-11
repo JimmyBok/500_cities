@@ -6,19 +6,19 @@ By Danny Lumian, PhD
 October, 2018
 
 ## Question
-
+    
     Bad habits (i.e., binge-drinking, smoking and sleeping <7 hrs a night) can 
-    significantly impact personal well-being and may put an increased burden on society 
-    (e.g., by increasing health-care costs). 
+    significantly impact personal well-being and put an increased burden on society 
+    (e.g., by increasing health-care costs, impaired working). 
     Therefore it is important to understand factors that contribute to bad habits 
     or, conversely, what predicts healthy living. 
 
      The National Institute on Alcohol Abuse and Alcoholism defines binge drinking as a pattern of drinking that 
-     brings a person’s blood alcohol concentration (BAC) to 0.08 grams percent or above. This typically happens when 
-     men consume 5 or more drinks or women consume 4 or more drinks in about 2 hours.4 Most people who binge drink 
-     are not alcohol dependent. (From https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm)
-
-    Can I predict these bad habits by demographic variables such as age, gender and education?
+     brings a person’s blood alcohol concentration (BAC) to 0.08 grams percent or above. 
+     This typically happens when men consume 5 or more drinks or 
+     women consume 4 or more drinks in about 2 hours. 
+     Most people who binge drink are not alcohol dependent. 
+     (From https://www.cdc.gov/alcohol/fact-sheets/binge-drinking.htm)
 
 ## The Data
 
@@ -29,7 +29,8 @@ October, 2018
     were collected in 2015. 
     I plan to first explore binge-drinking, but hope to extend analyses to examine all three outcomes. 
 
-    American Community Survey-5 year estimates(ACS5): The US Census Bureau collected 5 year estimates on demographic variables 
+    American Community Survey-5 year estimates(ACS5): 
+    The US Census Bureau collected 5 year estimates on demographic variables 
     (https://www.census.gov/programs-surveys/acs/technical-documentation/table-and-geography-changes/2015/5-year.html) 
     accessible by census tract ID (for joining with 500 Cities data). 
     This dataset includes 1000s of variables (see: https://api.census.gov/data/2015/acs5/variables.html). 
@@ -66,6 +67,27 @@ October, 2018
 
 ![Binge Drinking Boxplot](images/Binge_drinking.png "Binge Drinking Boxplot")
 
+## Hypotheses 
+
+    0. The base rate of binge drinking will be above 0 (intercept>0).
+    1. As the median age <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    2. As the % of the population that is female <b>increases</b>, 
+        the % of the population that binge drinks will <b>decrease</b>.
+    3. As the % of the population with less than a high school education <b>increases</b>,
+        the % of the population that binge drinks will <b>increase</b>. 
+    4. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    5. As the % of the population with a commute less than 30 minutes <b>increases</b>,
+        the % of the population that binge drinks will <b>increase</b>.  
+    6. As the % of the population that departs for work before 8am <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    7. As the % of the population with insurance <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    8. State will be associated with binge drinking,
+        no directional hypotheses.   
+
+<!---
 #### Goldfeldquandt Test
 ```python
 all_cols = list(df.columns)
@@ -105,7 +127,7 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
     
     * Note: Ridge performed best (marginally better than Linear and LassoLars)
     * For simplicties sake and since performance was comparable, interpreting linear regression
-
+-->
 #### Linear Regression Analysis
 
     57 Predictors + an intercept in model
@@ -115,14 +137,37 @@ vifs = pd.Series([variance_inflation_factor(vif_df.values, i)
     7 Demographic variables shown above
 
 
-|   Intercept |   Percent_female |   Income_to_pov_rat_lt_1_5 |   Edu_less_than_hs_or_GED |   Percent_insured |   Work_depart_before_8am |   Med_age |   Commute_time_lt_30 |
+|   Intercept |   Percent female |   IPR < 1.5 |   Edu < HS/GED |   Percent insured |   Work depart before 8am |   Med_age |   Commute time < 30m |
 |------------:|-----------------:|---------------------------:|--------------------------:|------------------:|-------------------------:|----------:|---------------------:|
 |     42.9877 |         -16.9848 |                   -10.0258 |                  -6.59758 |          -4.20619 |                -0.767881 |  -0.24437 |             0.981684 |
 
-### Choromap
+### Choropleth map
 
 ![Impact of State on Binge-Drinking](images/choromap.png "Binge Drinking By State")
 
+## Hypotheses Results
+
+    0. The base rate of binge drinking will be above 0 (intercept>0).
+        -Intercept was ~43%
+    1. As the median age <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+        -Coef was -0.24437
+    2. As the % of the population that is female <b>increases</b>, 
+        the % of the population that binge drinks will <b>decrease</b>.
+        -Coef was -16.9848
+    <strike>3. As the % of the population with less than a high school education <b>increases</b>,
+        the % of the population that binge drinks will <b>increase</b>.</strike>
+        -Coef was -6.59758
+    4. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    5. As the % of the population with a commute less than 30 minutes <b>increases</b>,
+        the % of the population that binge drinks will <b>increase</b>.  
+    6. As the % of the population that departs for work before 8am <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    7. As the % of the population with insurance <b>increases</b>,
+        the % of the population that binge drinks will <b>decrease</b>.
+    8. State will be associated with binge drinking,
+        no directional hypotheses.   
 
 ## MVP+, MVP++, MVP+++
     1. Expand analyses to include other bad behaviors (i.e., smoking and sleeping < 7 hrs a night).
