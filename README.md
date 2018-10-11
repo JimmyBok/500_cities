@@ -18,26 +18,26 @@ Can demographic variables, such as gender, age and geographical location, predic
 ## The Data
 
 ### 500 Cities: 
-    The Center for Disease Control collected data from 500 cities (https://www.cdc.gov/500cities/) 
-    across the US broken down by census tract (28,000+) on disease risk factors, 
-    health outcomes and preventive services collected in 2015.  
-    The disease risk factors, or bad habits, as defined by the CDC 
-    (https://www.cdc.gov/500cities/definitions/unhealthy-behaviors.htm) are:
+The Center for Disease Control collected data from 500 cities (https://www.cdc.gov/500cities/) 
+across the US broken down by census tract (28,000+) on disease risk factors, 
+health outcomes and preventive services collected in 2015.  
+The disease risk factors, or bad habits, as defined by the CDC 
+(https://www.cdc.gov/500cities/definitions/unhealthy-behaviors.htm) are:
 
-        <b>Binge drinking</b>:
+    Binge drinking:
 
-            Adults aged ≥18 years who report having five or more drinks (men) or 
-            four or more drinks (women) on an occasion in the past 30 days.
+        Adults aged ≥18 years who report having five or more drinks (men) or 
+        four or more drinks (women) on an occasion in the past 30 days.
 
-        **Current smoking**:
+    Current smoking:
 
-            Respondents aged ≥18 years who report having smoked ≥100 cigarettes
-             in their lifetime and currently smoke every day or some days.
+        Respondents aged ≥18 years who report having smoked ≥100 cigarettes
+         in their lifetime and currently smoke every day or some days.
 
-        __Sleep < 7 hrs a night__:
+    Sleep < 7 hrs a night:
 
-            Respondents aged ≥18 years who report usually getting insufficient 
-            sleep (<7 hours for those aged ≥18 years, on average, during a 24-hour period).
+        Respondents aged ≥18 years who report usually getting insufficient 
+        sleep (<7 hours for those aged ≥18 years, on average, during a 24-hour period).
 
 
 ### American Community Survey-5 year estimates(ACS5): 
