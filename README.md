@@ -84,19 +84,19 @@ commute time, work departure time and insurance coverage as predictors of bad ha
 
 1. The base rate of bad habits will be above 0 (intercept>0).
 1. As the median age <b>increases</b>,
-    the % of the population that binge drinks will <b>decrease</b>.
+    the % of the population engaging in bad habits will <b>decrease</b>.
 1. As the % of the population that is female <b>increases</b>, 
-    the % of the population that binge drinks will <b>decrease</b>.
-3. As the % of the population with less than a high school education <b>increases</b>,
-    the % of the population that binge drinks will <b>increase</b>. 
-4. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
-    the % of the population that binge drinks will <b>decrease</b>.
-5. As the % of the population with a commute less than 30 minutes <b>increases</b>,
-    the % of the population that binge drinks will <b>decrease</b>.  
-6. As the % of the population that departs for work before 8am <b>increases</b>,
-    the % of the population that binge drinks will <b>decrease</b>.
-7. As the % of the population with insurance <b>increases</b>,
-    the % of the population that binge drinks will <b>decrease</b>.
-8. State will be associated with binge drinking,
+    the % of the population engaging in bad habits will <b>decrease</b>.
+1. As the % of the population with less than a high school education <b>increases</b>,
+    the % of the population engaging in bad habits will <b>increase</b>. 
+1. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
+    the % of the population engaging in bad habits will <b>decrease</b>.
+1. As the % of the population with a commute less than 30 minutes <b>increases</b>,
+    the % of the population engaging in bad habits will <b>decrease</b>.  
+1. As the % of the population that departs for work before 8am <b>increases</b>,
+    the % of the population engaging in bad habits will <b>decrease</b>.
+1. As the % of the population with insurance <b>increases</b>,
+    the % of the population engaging in bad habits will <b>decrease</b>.
+1. State will be associated with bad habits,
     no directional hypotheses.   
 
