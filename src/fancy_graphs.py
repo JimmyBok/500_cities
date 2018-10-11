@@ -165,3 +165,39 @@ data = {'Binge Drinking': [0.680, 2.159, 2.189],
 df = pd.DataFrame.from_dict(data)
 df.index = ['Adj R^2', 'Train RMSE', 'Test RMSE']
 to_markdown_with_index(df)
+
+
+
+mpl.rcParams.update({
+    'font.size'           : 20.0,
+    'axes.titlesize'      : 'large',
+    'axes.labelsize'      : 'medium',
+    'xtick.labelsize'     : 'small',
+    'ytick.labelsize'     : 'medium',
+    'legend.fontsize'     : 'xx-small',
+})
+
+data = {'Binge Drinking': [-17.0208, -6.5088, -10.0818, 0.9218, -0.8901, -4.1470],
+                'Smoking' : [-3.1133, 12.0400, 16.5517,0.3347, 3.8534, 6.2355 ],
+                'Sleep < 7hrs': [7.5038, 10.9263, 12.2285, -7.2640, 2.2277, 3.0339 ]}
+labels = ['% Female',
+            '% Edu < HS',
+            '% IPR < 1.5',
+            '% Commute < 30',
+            '% Depart before 8',
+            '% Insured']
+df = pd.DataFrame.from_dict(data)
+# df['Dropped'] = df.Initial-df.Final
+# df['Drop %'] = df.Dropped/df.Initial*100
+df.index = labels 
+# df.columns = ['Binge Drinking', 'Smoking', 'Sleep < 7hrs']
+print('\n')
+to_markdown_with_index(df)
+ax = df.T.plot(kind='bar')
+ax.set_xticklabels(ax.get_xticklabels(), rotation=15)
+ax.set(ylabel='Coefficient')
+ax.legend(loc='lower right', ncol=2, fancybox=False, shadow=False)
+plt.tight_layout()
+# plt.show()
+plt.savefig(img_dir+'Coeffs_Bar.png')
+plt.close()

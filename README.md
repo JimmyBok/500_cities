@@ -116,13 +116,13 @@ commute time, work departure time and insurance coverage as predictors of bad ha
 ## Results
 
 ### Models
-Three models with outcomes of binge drinking, smoking and sleeping < 7hrs a night.
+Three linear regression models were run with outcomes of binge drinking, smoking and sleeping < 7hrs a night.
 
-Fifty-seven predictors (plus intecept).
+Fifty-seven predictors (plus intecept) were included.
 
-Seven demographic variables.
+Seven of which were demographic variables.
 
-50 state variables (included DC, CO as baseline). 
+50 of which were regional/state variables (included DC, CO as baseline). 
 
 ### Demographic Results
 
@@ -137,6 +137,9 @@ Seven demographic variables.
 | % Depart before 8 |           -0.89  |     3.853 |          2.228 |
 | % Insured         |           -4.147 |     6.236 |          3.034 |
 Note: All associated *p* values <.01
+
+
+![Demographic Coeff Barplot](fancy_images/Coeffs_Bar.png "Demographics Coeff Barplot")
 
 ### Geographic Results
 
