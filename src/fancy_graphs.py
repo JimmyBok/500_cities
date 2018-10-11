@@ -11,6 +11,11 @@ def to_markdown(df, round_places=3):
     """Returns a markdown, rounded representation of a dataframe"""
     print(tabulate(df.round(round_places), headers='keys', tablefmt='pipe', showindex=False))
 
+def to_markdown_with_index(df, round_places=3):
+    """Returns a markdown, rounded representation of a dataframe"""
+    print(tabulate(df.round(round_places), headers='keys', tablefmt='pipe', showindex=True))
+
+
 mpl.rcParams.update({
     'font.size'           : 20.0,
     'axes.titlesize'      : 'large',
@@ -113,3 +118,21 @@ df.columns = ['Binge Drinking', 'Smoking', 'Sleep < 7hrs']
 to_markdown(df)
 
 
+data = {'Binge Drinking': [43.0240, -0.2442, -17.0208, -6.5088, -10.0818, 0.9218, -0.8901, -4.1470],
+                'Smoking' : [4.6686, -0.0455, -3.1133, 12.0400, 16.5517,0.3347, 3.8534, 6.2355 ],
+                'Sleep < 7hrs': [22.4630, -0.0675, 7.5038, 10.9263, 12.2285, -7.2640, 2.2277, 3.0339 ]}
+labels = ['Intecept',
+            'Median Age',
+            '% Female',
+            '% Edu < HS',
+            '% IPR < 1.5',
+            '% Commute < 30',
+            '% Depart before 8',
+            '% Insured']
+df = pd.DataFrame.from_dict(data)
+# df['Dropped'] = df.Initial-df.Final
+# df['Drop %'] = df.Dropped/df.Initial*100
+df.index = labels 
+# df.columns = ['Binge Drinking', 'Smoking', 'Sleep < 7hrs']
+print('\n')
+to_markdown_with_index(df)
