@@ -10,10 +10,10 @@ October, 2018
 Bad habits (i.e., binge-drinking, smoking and sleeping <7 hrs a night) 
 significantly impact personal well-being and put an increased burden on society 
 (e.g., by increasing health-care costs, impaired working). 
-Therefore it is important to understand factors contribute to bad habits 
+Therefore it is important to understand factors that contribute to bad habits 
 or, conversely, what predicts healthy living. 
 
-Can demographic variables, such as gender, age and geographical location, predict bad habits?
+This project aims to explore whether and how demographic variables (e.g., gender, age) and geographical location (i.e., state) predict bad habits.
 
 ## The Data
 
@@ -105,7 +105,7 @@ commute time, work departure time and insurance coverage as predictors of bad ha
 1. As the % of the population with an income to poverty ratio of less than 1.5 <b>increases</b>,
     the % of the population engaging in bad habits will <b>decrease</b>.
 1. As the % of the population with a commute less than 30 minutes <b>increases</b>,
-    the % of the population engaging in bad habits will <b>decrease</b>.  
+    the % of the population engaging in bad habits will <b>increase</b>.  
 1. As the % of the population that departs for work before 8am <b>increases</b>,
     the % of the population engaging in bad habits will <b>decrease</b>.
 1. As the % of the population with insurance <b>increases</b>,
@@ -169,18 +169,25 @@ In general the hypotheses were not supported because bad habits were differentia
 The only factor consistently negatively correlated with bad habits as a whole was median age.
 
 Binge drinking was positively associated with % having a commute < 30 minutes.
+
 Binge drinking was negatively associated with age, % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured. 
 
 Smoking was postiively associated with % education < HS, % IPR <1.5, % having a commute < 30 minutes, % departing for work before 8 am, and % insured.
+
 Smoking was negatively assocaited with age and % female.
 
 Sleeping < 7 hrs a night was postiively associated with % female, % education < HS, % IPR <1.5, % departing for work before 8 am, and % insured.
+
 Sleeping < 7 hrs a night was negatively assocaited with age and having a commute < 30 minutes.
 
 Of note, education, IPR, insurance and depart time all showed a similar pattern of results. 
+
 That is, they negatively predicted binge drinking and positively predicted smoking and sleeping <7 hrs a night.
+
 These factors may all reflect socio-economic status which may be a more general predictor of bad habits. 
 
+
+The demographic profile of binge drinking appear substantially different from that of smoking and not sleeping. 
 
 ## MVP+, MVP++, MVP+++
 1. Include data from additional sources to explore non-demographic contributors to bad habits. 
