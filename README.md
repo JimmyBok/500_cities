@@ -70,7 +70,7 @@ October, 2018
 ## Hypotheses 
 
     0. The base rate of binge drinking will be above 0 (intercept>0).
-    1. As the median age <b>increases</b>,
+    1. As the median age __increases__,
         the % of the population that binge drinks will <b>decrease</b>.
     2. As the % of the population that is female <b>increases</b>, 
         the % of the population that binge drinks will <b>decrease</b>.
